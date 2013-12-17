@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Страница точных расчетов</title>
+    <style>
+        .warningInput {
+            border-color: #ff0000; /* Цвет фона */
+            color: #ff3f04; /* Цвет текста */
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="result" disabled>
+    <form>
+        <input id="r1" name="num1" type="text" size="20" disabled/>
+        <select id="operation_result" disabled>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>&#8730;</option>
+        </select>
+        <input type="text" id="r2" name="num2" size="20" disabled/> =
+        <input type="text" id="r3" name="resultNumber" size="20" disabled/>
+    </form>
+</div>
+<div id="exeption" style="color: #ff0000"></div>
+<div id="warning" style="color: #c71585">warnin</div>
+<div id="calc">
+    <form>
+        <input id="number1" name="numb1" type="text" size="20"
+               onkeyup="var n=this.value.replace(/([^0-9\.]?e)/gi,'');
+                if(n!=this.value) this.value=n;"/>
+        <select id="operation" >
+            <option value="addition">+</option>
+            <option value="deduction">-</option>
+            <option value="multiplication">*</option>
+            <option value="division">/</option>
+            <option value="sqroot">&#8730;</option>
+        </select>
+        <input type="text" id="number2" name="num2" size="20" onchange="checkInput('number2')"/>
+        <input type="button" name="button" onclick="startAjax('http://localhost:8080/webcalc');" value="Расчитать" >
+    </form>
+</div>
+<br/>
+<div id="printResult" >
+    После нажатия на кнопку, тут будет сообщение с сервера!
+</div>
+</body>
+</html>
