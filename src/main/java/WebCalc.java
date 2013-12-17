@@ -7,10 +7,15 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+/**  Класс-сервлет обрабатывающий запросы от пользователей Http методами Get и Post
+ * Наследуетсz от класса javax.servlet.http.HttpServlet
+ */
 @SuppressWarnings("serial")
 public class WebCalc extends HttpServlet {
+
     private final static Logger log = Logger.getLogger(WebCalc.class.getName());
 
+    /**метод обрабатывает запросы полученные Get методом*/
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {   log.info("WebCalc.doGet() Start. Обращение к сервису методом Get. ");
         try{
@@ -20,10 +25,11 @@ public class WebCalc extends HttpServlet {
             pw.print("Вы обратились к сервису  методом Get." +
                     "Для доступа к всем возможностям сервиса рекомендуем воспользоваться методом Post.");
         } catch (IOException io){
-            log.log(Level.WARNING,"WebCalc.doGet() - словлена ошибка ввода/вывода IOException", io);
+            log.log(Level.WARNING,"WebCalc.doGet() - словлено исключение ввода/вывода IOException", io);
         }
         log.info("WebCalc.doPost END. Обращение к сервису методом Get успешно обработано. ");
     }
+    /**Метод обрабатывает запросы полученные Post методом*/
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     {   log.info("WebCalc.doPost START. Обращение к сервису методом Post.");
         try{
@@ -37,6 +43,9 @@ public class WebCalc extends HttpServlet {
         }
         log.info("WebCalc.doPost START. Обращение к сервису методом Post успешно обработано. ");
     }
+    /**Метод представляет объекты типа Result в Xml используя стандартную библиотеку JDK - JAXB.
+     * Добавляет в поток вывода объект Xml
+     */
     protected void toXml (Result result, PrintWriter printWriter){
         log.info("WebCalc.toXml START. Начало преобразования объекта в XML");
         try {

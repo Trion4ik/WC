@@ -1,11 +1,10 @@
 import java.util.logging.Logger;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Администратор
- * Date: 13.12.13
- * Time: 19:46
- * To change this template use File | Settings | File Templates.
+ * Enum класс предназначен для хранения всех исключений(текста и кода), которые могут генерироваться
+ * сервисом
+ * @author Maksimov Roman
+ * @version 1.0.2
  */
 public enum Exept {
     E1("Недопустимая операция - деление на ноль.", "001"),
@@ -25,14 +24,21 @@ public enum Exept {
 
     private String message;
     private String cod;
-
+    /** Конструктор класса
+     * @param message - текст исключения
+     * @param cod - код исключения
+    */
     Exept(String message, String cod){
         this.message=message;
         this.cod=cod;
     }
+    /** Метод возвращающий текст исключения
+    */
     public String getMessage() {
         return message;
     }
+    /** Метод возвращающий код исключения
+     */
     public String getCod() {
         return cod;
     }
