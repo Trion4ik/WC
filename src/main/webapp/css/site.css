@@ -24,7 +24,7 @@ div {
 img {
     border:none;
 }
-div.block {width:660px; height:240px; margin-top:25px; margin-left:150px; background-color:#ffffff; border:1px solid #333333;
+div.block {width:660px; height:380px; margin-top:25px; margin-left:150px; background-color:#ffffff; border:1px solid #333333;
     padding: 10px;
     /* Internet Explorer */
     filter:alpha(opacity=70);
