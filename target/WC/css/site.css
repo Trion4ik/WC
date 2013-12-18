@@ -7,8 +7,6 @@ div {
     text-align: center
 }
 .button { background-color: hsl(193, 32%, 49%) !important;
-    margin: 10px;
-    padding: 10px;
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b8d3da", endColorstr="#5493a4");
     background-image: -khtml-gradient(linear, left top, left bottom, from(#b8d3da), to(#5493a4));

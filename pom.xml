@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>WebCalc</groupId>
-  <artifactId>WC</artifactId>
+  <artifactId>wc</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>WC Maven Webapp</name>
@@ -23,6 +23,6 @@
   </dependencies>
 
   <build>
-    <finalName>WC</finalName>
+    <finalName>wc</finalName>
   </build>
 </project>
