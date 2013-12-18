@@ -4,7 +4,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <head>
     <title>Страница точных расчетов</title>
+
     <link rel="stylesheet" type="text/css" href="css/site.css">
+    <!--[if lte IE 10]><link href="css/ie-style.css" rel="stylesheet" type="text/css" /<![endif]-->
 
     <script type="text/javascript" src="js/clientControl.js"></script>
 </head>
@@ -59,7 +61,7 @@
                    onkeypress="enter(this.value, event)"/> =
             <input type="text" id="number3" name="num2" size="25" disabled/>
 
-            <input type="button" name="button" class="button" onclick="checkData();" value="Расчитать">
+            <input type="button" name="button" class="submit" onclick="checkData();" value="Расчитать">
         </form>
 
     </div>

@@ -6,7 +6,7 @@ body {
 div {
     text-align: center
 }
-.button { background-color: hsl(193, 32%, 49%) !important;
+.submit { background-color: hsl(193, 32%, 49%) !important;
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b8d3da", endColorstr="#5493a4");
     background-image: -khtml-gradient(linear, left top, left bottom, from(#b8d3da), to(#5493a4));
@@ -26,8 +26,7 @@ img {
 }
 div.block {width:660px; height:380px; margin-top:25px; margin-left:150px; background-color:#ffffff; border:1px solid #333333;
     padding: 10px;
-    /* Internet Explorer */
-    filter:alpha(opacity=70);
+    filter:alpha(opacity=70);  /*для старых Internet Explorer */
     /* CSS3 standard */
     opacity:0.7}
 

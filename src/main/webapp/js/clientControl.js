@@ -64,7 +64,7 @@ function prepareRequest() {
 function printExeption(responseXml) {
     clearExeption();
     var exeptions = responseXml.getElementsByTagName("exeptionMessage");
-    for (var i =0; i<exeptions.length; i++) {
+    for (var i = 0; i < exeptions.length; i++) {
         var info_exeption = stringConcat("<p>", exeptions[i].childNodes[0].nodeValue, "</p>");
         document.getElementById("exeption").innerHTML += info_exeption;
     }
@@ -168,13 +168,17 @@ function checkData() {
     //стену clearBadSymbol() поэтому мы повторно очищаем числа
     var n2 = clearBadSymbol(getIdValue('number2'));
     var n1 = clearBadSymbol(getIdValue('number1'));
+
     //Проверка не заканчивается ли строка символом 'E'
     e = function (id, value) {
-        if (/E$/i.test(value)|| /-$/.test(value)) {
-            printWarning(id, "Число не может заканчиваться ни 'Е', ни '-'.");
+        if (/[E,-,.]$/.test(value)) {
+            printWarning(id, "Число не может заканчиваться ни 'Е', ни '-', ни '.'");
+            return true;
+        } else if (/\.E/.test(value)) {
+            printWarning(id, "Число не может иметь конструкцию '.Е'");
             return true;
         }
-        }
+    }
     if (e('number1', n1)) return;//проверяем число 1 если есть предупреждения завершаем работу функции
     if (e('number2', n2)) return; //проверяем число 2
     var operation = getIdValue("operation");
@@ -188,17 +192,17 @@ function checkData() {
 
 }
 /* Функция удаляет все лишние минусы
-"-" может быть только первым символом и встречаться сразу после "Е"*/
+ "-" может быть только первым символом и встречаться сразу после "Е"*/
 function replaceBadMinus(n) {
     var goodString;
     var temp = n.indexOf('E-');
-    if (temp==0){
+    if (temp == 0) {
         goodString = n.replace(/E-/gi, '');
     }
     if (temp > 0) {
         goodString = stringConcat(n.charAt(0),
             n.substr(1, temp).replace(/-/gi, ''),  //удаляем минусы перед констукцией 'E-'
-            n.charAt(temp+1),
+            n.charAt(temp + 1),
             n.substr(temp + 1).replace(/-/gi, ''));  //удаляем все минусы после констукции 'E-'
         return goodString;
     }
@@ -215,7 +219,7 @@ function replaceBadMinus(n) {
 function clearBadSymbol(value) {
     //Удаляем все символы кроме цифр, ".", "Е" и "-"
     var n = value.replace(/[^0-9.e-]/gi, '').toUpperCase();
-    n=replaceBadMinus(n); //удаляем лишние минусы из числа
+    n = replaceBadMinus(n); //удаляем лишние минусы из числа
     //часть кода отвечающая за то чтоб разделитель "." не встечался после "Е"
     var e = n.indexOf('E');
     var i = n.indexOf('.');
@@ -234,8 +238,8 @@ function clearBadSymbol(value) {
         n = stringConcat(n.substr(0, i + 1),
             n.substr(i + 1).replace(/\./g, ''));
     }
-    n=n.replace(/-E/gi, ''); //удаляем запрещенную конструкцию '-E'
-    n=n.replace(/.-E/gi, ''); //удаляем запрещенную конструкцию '.E'
+    n = n.replace(/-E/gi, ''); //удаляем запрещенную конструкцию '-E'
+    n = n.replace(/.-E/gi, ''); //удаляем запрещенную конструкцию '.E'
     return n;
 }
 /*Функция связанная с событием выбора операции пользователем
