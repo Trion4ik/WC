@@ -64,8 +64,8 @@ function prepareRequest() {
 function printExeption(responseXml) {
     clearExeption();
     var exeptions = responseXml.getElementsByTagName("exeptionMessage");
-    for (var i in exeptions) {
-        var info_exeption = stringConcat("<p>", exeptions[i].childNodes[0].data, "</p>");
+    for (var i =0; i<exeptions.length; i++) {
+        var info_exeption = stringConcat("<p>", exeptions[i].childNodes[0].nodeValue, "</p>");
         document.getElementById("exeption").innerHTML += info_exeption;
     }
 }
@@ -196,9 +196,9 @@ function replaceBadMinus(n) {
         goodString = n.replace(/E-/gi, '');
     }
     if (temp > 0) {
-        goodString = stringConcat(n[0],
+        goodString = stringConcat(n.charAt(0),
             n.substr(1, temp).replace(/-/gi, ''),  //удаляем минусы перед констукцией 'E-'
-            n[temp+1],
+            n.charAt(temp+1),
             n.substr(temp + 1).replace(/-/gi, ''));  //удаляем все минусы после констукции 'E-'
         return goodString;
     }
