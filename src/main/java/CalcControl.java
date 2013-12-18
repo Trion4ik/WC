@@ -74,6 +74,7 @@ public class CalcControl {
         * создаем числа по модулю**/
         double n1=(number1>0)?number1:-number1;
          double n2=(number2>0)?number2:-number2;
+        if (!checkNumbers(r, n1, n2)) return 0; //проверяем не выходят ли числа по модулю за допустимые пределы
         /**если операция умножение**/
          if(operation.equals("multiplication")){
                  if (checkMultiplication(r, n1, n2)){
@@ -88,15 +89,11 @@ public class CalcControl {
             }
          /**если операция сложения**/
          else if(operation.equals("addition")){
-                 if (checkAddition(r, n1, n2)){
                      return number1+number2;
-                 }
             }
          /**если операция вычитания**/
          else if(operation.equals("deduction")){
-                if (checkAddition(r, n1, n2)){
                     return number1-number2;
-                }
             }
          /**если операция квадратный корень**/
          else if(operation.equals("sqroot")){
@@ -113,11 +110,11 @@ public class CalcControl {
      **/
     private static boolean checkMultiplication(Result r, double n1, double n2){
 
-         if ((Math.log10(n1)+Math.log10(n2))>308){
+         if ((Math.log10(n1)+Math.log10(n2))>303){
              r.addExeption(Exept.E4);
              return false;
          }
-         else if(Math.log10(n1)+Math.log10(n2)>-323){
+         else if(Math.log10(n1)+Math.log10(n2)<-303){
              r.addExeption(Exept.E11);
              return false;
 
@@ -133,10 +130,10 @@ public class CalcControl {
             r.addExeption(Exept.E1);
             b=false;
          }
-        else if ((Math.log10(n1)-Math.log10(n2))>308){
+        else if ((Math.log10(n1)-Math.log10(n2))>303){
             r.addExeption(Exept.E9);
             b=false;
-        } else if(Math.log10(n1)-Math.log10(n2)<-323){
+        } else if(Math.log10(n1)-Math.log10(n2)<-303){
             r.addExeption(Exept.E10);
             b=false;
         }
@@ -145,7 +142,7 @@ public class CalcControl {
     /**Метод проверки чисел на возможность проведения операций сложения и вычетания
      * Может добалять исключения к объекту Result из набора enum Exept
      **/
-    private static boolean checkAddition(Result r, double n1, double n2){
+    private static boolean checkNumbers(Result r, double n1, double n2){
         boolean b=true;
         if(n1>Double.MAX_VALUE/2){
             r.addExeption(Exept.E12);
