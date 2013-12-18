@@ -47,7 +47,7 @@
                onkeypress="enter(this.value, event)"/> =
         <input type="text" id="number3" name="num2" size="25" disabled/>
 
-        <input type="button" name="button" class="button" size="25" onclick="checkData();" value="Расчитать" >
+        <input type="button" name="button" class="button" onclick="checkData();" value="Расчитать" >
     </form>
 
 </div>

@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class CalcControl {
    /** блок инициализации **/
     private final static Logger log= Logger.getLogger(CalcControl.class.getName());
-
+    private static String [] operations = {"addition", "deduction", "multiplication", "division", "sqroot" };
    /** НАЧАЛО блока public методов **/
 
     /** Метод предназначен для обработки входных данных от пользователя и возврата результа
@@ -33,6 +33,8 @@ public class CalcControl {
 
          /**парсинг входных данных из запроса пользователя**/
         String operation = request.getParameter("operation");
+
+        if (!checkOperation(result, operation)) return result; //отправка результата если операция не корректна
         try{
             if(!operation.equals("sqroot")){
                 number1 = Double.parseDouble(request.getParameter("number1"));
@@ -56,8 +58,16 @@ public class CalcControl {
              return result;
         }
     }
-
     /** КОНЕЦ блока public методов **/
+
+    /** Метод предназначен для проверки коректности параметра operation полученного от пользователя*/
+    public static boolean checkOperation(Result result, String operation){
+        for(String s: operations){
+            if (s.equals(operation)) return true;
+        }
+        result.addExeption(Exept.E14);
+        return false;
+    }
     /** Метод предназначен для обработки вычеслений и возврата результата в виде числа.
      *  В результате вычислений могут генерироваться исключения из набора enum Exept.
      *  При генерации исключений возвращается число 0;

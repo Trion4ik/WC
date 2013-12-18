@@ -14,6 +14,7 @@ import javax.xml.bind.Marshaller;
 public class WebCalc extends HttpServlet {
 
     private final static Logger log = Logger.getLogger(WebCalc.class.getName());
+    private volatile StringBuilder sbild = new StringBuilder();
 
     /**метод обрабатывает запросы полученные Get методом*/
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -22,8 +23,18 @@ public class WebCalc extends HttpServlet {
             response.setContentType("text/html");
             response.setCharacterEncoding("utf8");
             PrintWriter pw = response.getWriter();
-            pw.print("Вы обратились к сервису  методом Get." +
-                    "Для доступа к всем возможностям сервиса рекомендуем воспользоваться методом Post.");
+            sbild.delete(0, sbild.length());
+            pw.print(sbild
+                    .append("Use utf-8 encoding in your browser.</br>")
+                    .append("Вы обратились к сервису  методом Get.</br>")
+                    .append("Для доступа к всем возможностям сервиса рекомендуем воспользоваться методом Post.</br>")
+                    .append("Сервис поддерживает операции над числами: </br> ")
+                    .append("'addition' - сложение</br>")
+                    .append("'deduction' - отнимание </br>")
+                    .append("'multiplication'- умножение</br>")
+                    .append("'division' - деление</br>")
+                    .append("'sqroot' - квадратный корень")
+                    .toString());
         } catch (IOException io){
             log.log(Level.WARNING,"WebCalc.doGet() - словлено исключение ввода/вывода IOException", io);
         }
