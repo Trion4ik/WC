@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=utf8"
-         pageEncoding="utf8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
 <html>
-<meta content="text/html; charset=UTF-8"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <head>
 <title>Страница точных расчетов</title>
 <link rel="stylesheet" type="text/css" href="css/site.css">

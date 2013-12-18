@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/web.xml" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387133217296" ignored="false" />
     <file path="/Dummy.txt" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387330571203" ignored="false" />
-    <file path="/index.jsp" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387327534437" ignored="false" />
+    <file path="/index.jsp" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387364368984" ignored="false" />
     <file path="/Result.java" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387283177531" ignored="false" />
     <file path="/Exept.java" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387281194375" ignored="false" />
     <file path="/CalcControl.java" changelist="b75c7fc0-8606-4dcd-a87f-0411f31c0ba6" time="1387315737046" ignored="false" />
@@ -95,10 +95,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="36" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="1" column="33" selection-start="95" selection-end="95" vertical-scroll-proportion="0.06390978">
               <folding />
             </state>
           </provider>
@@ -113,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.74657536">
+            <state line="25" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -198,9 +198,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Exept.java" />
         <option value="$PROJECT_DIR$/src/main/java/CalcControl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/clientControl.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/site.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -698,7 +698,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -719,7 +719,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19124797" sideWeight="0.5668277" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43317232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43317232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -879,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="36" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
@@ -895,7 +888,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.74657536">
+        <state line="25" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="33" selection-start="95" selection-end="95" vertical-scroll-proportion="0.06390978">
           <folding />
         </state>
       </provider>
