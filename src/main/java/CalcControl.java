@@ -46,9 +46,14 @@ public class CalcControl {
         }
         catch(NumberFormatException nfe){
             result.addExeption(Exept.E7);
+            StringBuilder sb = new StringBuilder();
             log.log(Level.WARNING,
-                    "Ceрвер не смог коректно обработать запрос клиента. Проблема формата входных данных "
-                    .concat(Exept.E7.getMessage()),
+                    sb.append("Ceрвер не смог коректно обработать запрос клиента. Проблема формата входных данных. ")
+                    .append("Число 1:")
+                    .append(number1)
+                    .append("Число 2:")
+                    .append(number2)
+                    .toString(),
                     nfe);
         }
         finally{

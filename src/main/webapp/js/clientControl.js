@@ -157,7 +157,7 @@ function clearWarning(id) {
 function changeWarningMessage() {
     var n1 = document.getElementById('number1');
     var n2 = document.getElementById('number2');
-    if (n1.className !== 'warningInput' && n2.className !== '') {
+    if (n1.className !== 'warningInput' && n2.className !== 'warningInput') {
         document.getElementById('warning').innerHTML = "";
     }
 }
@@ -169,7 +169,7 @@ function checkData() {
     var n2 = clearBadSymbol(getIdValue('number2'));
     var n1 = clearBadSymbol(getIdValue('number1'));
 
-    //Проверка не заканчивается ли строка символом 'E'
+    //Проверка не заканчивается ли строка символоми 'E' '-' '.'
     e = function (id, value) {
         if (/[E,-,.]$/.test(value)) {
             printWarning(id, "Число не может заканчиваться ни 'Е', ни '-', ни '.'");
